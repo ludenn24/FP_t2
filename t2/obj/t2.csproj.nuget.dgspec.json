@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj": {}
+    "C:\\Users\\renzo\\source\\repos\\FP_t2\\t2\\t2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj": {
+    "C:\\Users\\renzo\\source\\repos\\FP_t2\\t2\\t2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj",
+        "projectUniqueName": "C:\\Users\\renzo\\source\\repos\\FP_t2\\t2\\t2.csproj",
         "projectName": "t2",
-        "projectPath": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj",
+        "projectPath": "C:\\Users\\renzo\\source\\repos\\FP_t2\\t2\\t2.csproj",
         "packagesPath": "C:\\Users\\renzo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\obj\\",
         "projectStyle": "PackageReference",

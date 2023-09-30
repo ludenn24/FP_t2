@@ -64,13 +64,17 @@ namespace t2
 
             listaMedicamentos.Add(med);
 
-            VisualizarMedicamentosListView(listaMedicamentos);
+            MostrarCantidadMedicamentos();
 
             MessageBox.Show("Medicamento registrado");
 
             LimpiarFormulario();
         }
 
+        private void MostrarCantidadMedicamentos()
+        {
+            label_cantidadMed.Text = $"(Hay {listaMedicamentos.Count} medicamentos)";
+        }
 
         private void LimpiarFormulario()
         {
@@ -87,14 +91,19 @@ namespace t2
 
             lista.ForEach(med =>
             {
-                ListViewItem fila = new ListViewItem(med.Nombre);
-                fila.SubItems.Add(med.Codigo);
-                fila.SubItems.Add(med.Cantidad.ToString());
-                fila.SubItems.Add(med.Precio.ToString());
-                fila.SubItems.Add(med.Monto.ToString());
-                lviewMedicamentos.Items.Add(fila);
+                completarFilaListView(med);
             });
 
+        }
+
+        private void completarFilaListView(Medicamento medicina)
+        {
+            ListViewItem fila = new ListViewItem(medicina.Nombre);
+            fila.SubItems.Add(medicina.Codigo);
+            fila.SubItems.Add(medicina.Cantidad.ToString());
+            fila.SubItems.Add(medicina.Precio.ToString());
+            fila.SubItems.Add(medicina.Monto.ToString());
+            lviewMedicamentos.Items.Add(fila);
         }
 
         private void LimpiarListView()
@@ -132,7 +141,7 @@ namespace t2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Medicamento> listaOrdenada = OrdenarList(listaMedicamentos);
+            List<Medicamento> listaOrdenada = (OrdenarList(listaMedicamentos)).ToList();
 
             VisualizarMedicamentosListView(listaOrdenada);
 
@@ -160,6 +169,8 @@ namespace t2
                 // Actualizar la vista (por ejemplo, el ListView) con la lista modificada
                 VisualizarMedicamentosListView(listaMedicamentos);
 
+                MostrarCantidadMedicamentos();
+
                 MessageBox.Show($"Elemento '{valorAEliminar}' eliminado correctamente.");
                 LimpiarFormulario();
             }
@@ -167,6 +178,39 @@ namespace t2
             {
                 MessageBox.Show($"No se encontró ningún elemento con el valor '{valorAEliminar}'.");
             }
+        }
+
+        private void txt_codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_listar_Click(object sender, EventArgs e)
+        {
+            VisualizarMedicamentosListView(listaMedicamentos);
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string valorBuscado = text_buscar.Text;
+            LimpiarListView();
+            bool encontroMedicamento = false;
+
+            for(int i = 0; i < listaMedicamentos.Count; i++)
+            {
+                if (listaMedicamentos[i].Nombre == valorBuscado)
+                {
+                    MessageBox.Show($"Se ha encontrado el medicamento: '{valorBuscado}'.");
+                    encontroMedicamento = true;
+                    completarFilaListView(listaMedicamentos[i]);
+                }
+            }
+
+            if (!encontroMedicamento)
+            {
+                MessageBox.Show($"El medicamento con el nombre: '{valorBuscado}' no existe.");
+            }
+
         }
     }
 }
