@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\royer\\.nuget\\packages\\": {}
+    "C:\\Users\\renzo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\royer\\source\\repos\\2023-2\\Fundamentos de Programación\\t2\\t2\\t2.csproj",
+      "projectUniqueName": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj",
       "projectName": "t2",
-      "projectPath": "C:\\Users\\royer\\source\\repos\\2023-2\\Fundamentos de Programación\\t2\\t2\\t2.csproj",
-      "packagesPath": "C:\\Users\\royer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\royer\\source\\repos\\2023-2\\Fundamentos de Programación\\t2\\t2\\obj\\",
+      "projectPath": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\t2.csproj",
+      "packagesPath": "C:\\Users\\renzo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\renzo\\Source\\Repos\\FP_t2\\t2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\royer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\renzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

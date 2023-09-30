@@ -12,10 +12,11 @@ namespace t2
         private string nombre, codigo;
         private int cantidad;
         private double precio, monto;
+        private int id;
+
 
         public Medicamento()
         {
-
         }
 
         //Método constructor
@@ -33,11 +34,13 @@ namespace t2
             return cantidad * precio;
         }
 
+
         //Getters and Setters
         public string Nombre { get => nombre; set => nombre = value; }
         public string Codigo { get => codigo; set => codigo = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
         public double Precio { get => precio; set => precio = value; }
         public double Monto { get => monto; set => monto = value; }
+
     }
 }

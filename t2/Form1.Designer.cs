@@ -44,30 +44,33 @@
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
-            btn_listar = new Button();
+            btn_limpiar = new Button();
+            button1 = new Button();
+            btn_eliminar = new Button();
             SuspendLayout();
             // 
             // txt_cantidad
             // 
-            txt_cantidad.Location = new Point(127, 199);
+            txt_cantidad.Location = new Point(145, 265);
+            txt_cantidad.Margin = new Padding(3, 4, 3, 4);
             txt_cantidad.Name = "txt_cantidad";
-            txt_cantidad.Size = new Size(190, 23);
+            txt_cantidad.Size = new Size(217, 27);
             txt_cantidad.TabIndex = 5;
-            txt_cantidad.TextChanged += txt_cantidad_TextChanged;
             // 
             // txt_codigo
             // 
-            txt_codigo.Location = new Point(127, 121);
+            txt_codigo.Location = new Point(145, 161);
+            txt_codigo.Margin = new Padding(3, 4, 3, 4);
             txt_codigo.Name = "txt_codigo";
-            txt_codigo.Size = new Size(190, 23);
+            txt_codigo.Size = new Size(217, 27);
             txt_codigo.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(34, 129);
+            label1.Location = new Point(39, 172);
             label1.Name = "label1";
-            label1.Size = new Size(46, 15);
+            label1.Size = new Size(58, 20);
             label1.TabIndex = 1;
             label1.Text = "Código";
             label1.Click += label1_Click;
@@ -75,9 +78,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 88);
+            label2.Location = new Point(39, 117);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 2;
             label2.Text = "Nombre";
             label2.Click += label2_Click;
@@ -85,33 +88,35 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(34, 202);
+            label3.Location = new Point(39, 269);
             label3.Name = "label3";
-            label3.Size = new Size(55, 15);
+            label3.Size = new Size(69, 20);
             label3.TabIndex = 3;
             label3.Text = "Cantidad";
             // 
             // txt_nombre
             // 
-            txt_nombre.Location = new Point(127, 80);
+            txt_nombre.Location = new Point(145, 107);
+            txt_nombre.Margin = new Padding(3, 4, 3, 4);
             txt_nombre.Name = "txt_nombre";
-            txt_nombre.Size = new Size(286, 23);
+            txt_nombre.Size = new Size(326, 27);
             txt_nombre.TabIndex = 4;
             txt_nombre.TextChanged += textBox2_TextChanged;
             // 
             // txt_precio
             // 
-            txt_precio.Location = new Point(127, 159);
+            txt_precio.Location = new Point(145, 212);
+            txt_precio.Margin = new Padding(3, 4, 3, 4);
             txt_precio.Name = "txt_precio";
-            txt_precio.Size = new Size(190, 23);
+            txt_precio.Size = new Size(217, 27);
             txt_precio.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(34, 167);
+            label4.Location = new Point(39, 223);
             label4.Name = "label4";
-            label4.Size = new Size(84, 15);
+            label4.Size = new Size(105, 20);
             label4.TabIndex = 7;
             label4.Text = "Precio unitario";
             label4.Click += label4_Click;
@@ -120,17 +125,18 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(38, 28);
+            label5.Location = new Point(43, 37);
             label5.Name = "label5";
-            label5.Size = new Size(364, 32);
+            label5.Size = new Size(457, 41);
             label5.TabIndex = 8;
             label5.Text = "CONTROL DE MEDICAMENTOS";
             // 
             // btn_registrar
             // 
-            btn_registrar.Location = new Point(38, 254);
+            btn_registrar.Location = new Point(39, 322);
+            btn_registrar.Margin = new Padding(3, 4, 3, 4);
             btn_registrar.Name = "btn_registrar";
-            btn_registrar.Size = new Size(157, 23);
+            btn_registrar.Size = new Size(179, 31);
             btn_registrar.TabIndex = 9;
             btn_registrar.Text = "REGISTRAR";
             btn_registrar.UseVisualStyleBackColor = true;
@@ -139,13 +145,13 @@
             // lviewMedicamentos
             // 
             lviewMedicamentos.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
-            lviewMedicamentos.Location = new Point(37, 295);
+            lviewMedicamentos.Location = new Point(43, 435);
+            lviewMedicamentos.Margin = new Padding(3, 4, 3, 4);
             lviewMedicamentos.Name = "lviewMedicamentos";
-            lviewMedicamentos.Size = new Size(375, 227);
+            lviewMedicamentos.Size = new Size(428, 301);
             lviewMedicamentos.TabIndex = 12;
             lviewMedicamentos.UseCompatibleStateImageBehavior = false;
             lviewMedicamentos.View = View.Details;
-            lviewMedicamentos.SelectedIndexChanged += lviewMedicamentos_SelectedIndexChanged;
             // 
             // columnHeader1
             // 
@@ -168,22 +174,50 @@
             // 
             columnHeader5.Text = "Monto inv.";
             // 
-            // btn_listar
+            // btn_limpiar
             // 
-            btn_listar.Location = new Point(338, 254);
-            btn_listar.Name = "btn_listar";
-            btn_listar.Size = new Size(75, 23);
-            btn_listar.TabIndex = 13;
-            btn_listar.Text = "Listar";
-            btn_listar.UseVisualStyleBackColor = true;
-            btn_listar.Click += button1_Click;
+            btn_limpiar.BackColor = SystemColors.Control;
+            btn_limpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_limpiar.ForeColor = SystemColors.ActiveCaptionText;
+            btn_limpiar.Location = new Point(377, 399);
+            btn_limpiar.Name = "btn_limpiar";
+            btn_limpiar.Size = new Size(94, 29);
+            btn_limpiar.TabIndex = 14;
+            btn_limpiar.Text = "Limpiar";
+            btn_limpiar.UseVisualStyleBackColor = true;
+            btn_limpiar.Click += btn_limpiar_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(39, 399);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 16;
+            button1.Text = "Ordenar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // btn_eliminar
+            // 
+            btn_eliminar.BackColor = Color.IndianRed;
+            btn_eliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_eliminar.ForeColor = SystemColors.ButtonFace;
+            btn_eliminar.Location = new Point(368, 161);
+            btn_eliminar.Name = "btn_eliminar";
+            btn_eliminar.Size = new Size(94, 29);
+            btn_eliminar.TabIndex = 17;
+            btn_eliminar.Text = "Eliminar";
+            btn_eliminar.UseVisualStyleBackColor = false;
+            btn_eliminar.Click += btn_eliminar_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(453, 554);
-            Controls.Add(btn_listar);
+            ClientSize = new Size(540, 886);
+            Controls.Add(btn_eliminar);
+            Controls.Add(button1);
+            Controls.Add(btn_limpiar);
             Controls.Add(lviewMedicamentos);
             Controls.Add(btn_registrar);
             Controls.Add(label5);
@@ -195,8 +229,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txt_codigo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Formulario";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -220,6 +255,8 @@
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
-        private Button btn_listar;
+        private Button btn_limpiar;
+        private Button button1;
+        private Button btn_eliminar;
     }
 }
